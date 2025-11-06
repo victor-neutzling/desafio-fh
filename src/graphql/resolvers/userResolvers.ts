@@ -14,30 +14,51 @@ export const resolvers = {
       _: any,
       { id }: SaldoQueryParams
     ): Promise<MonetaryValueResponse> => {
-      return await UserService.getBalance(id);
+      try {
+        return UserService.getBalance(id);
+      } catch (error) {
+        throw new Error("Failed to retrieve balance");
+      }
     },
     users: async (): Promise<User[]> => {
-      return await UserService.index();
+      try {
+        return UserService.index();
+      } catch (error) {
+        throw new Error("Failed to retrieve users");
+      }
     },
   },
+
   Mutation: {
     createUser: async (
       _: any,
       { name, initialBalance }: CreateUserMutationParams
     ): Promise<User> => {
-      return await UserService.store(name, initialBalance);
+      try {
+        return UserService.store(name, initialBalance);
+      } catch (error) {
+        throw new Error("Failed to create user");
+      }
     },
     depositar: async (
       _: any,
       { id, amount }: DepositarMutationParams
     ): Promise<MonetaryValueResponse> => {
-      return await UserService.deposit(id, amount);
+      try {
+        return UserService.deposit(id, amount);
+      } catch (error) {
+        throw new Error("Failed to deposit");
+      }
     },
     sacar: async (
       _: any,
       { id, amount }: SacarMutationParams
     ): Promise<MonetaryValueResponse> => {
-      return await UserService.withdraw(id, amount);
+      try {
+        return UserService.withdraw(id, amount);
+      } catch (error) {
+        throw new Error("Failed to withdraw");
+      }
     },
   },
 };

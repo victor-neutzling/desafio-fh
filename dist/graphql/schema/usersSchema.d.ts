@@ -1,0 +1,2 @@
+export declare const typeDefs = "\n  type SaldoResponse {\n    value: Float\n    message: String\n  }\n\n  type Query {\n    saldo(id: ID!): SaldoResponse\n    users: [User!]!\n  }\n\n  type Mutation {\n    createUser(name: String!, initialBalance: Float): User\n    depositar(id: ID!, amount: Float!): SaldoResponse\n    sacar(id: ID!, amount: Float!): SaldoResponse\n  }\n\n  type User {\n    id: ID!\n    name: String!\n    balance: Float!\n  }\n";
+//# sourceMappingURL=usersSchema.d.ts.map
