@@ -12,6 +12,7 @@ To build and run the project with Docker, use the following command:
 docker-compose up --build
 ```
 
+Run unit tests
 ```bash
 npm run test
 ```
