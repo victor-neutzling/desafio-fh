@@ -1,26 +1,6 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "extends": "@tsconfig/node22/tsconfig.json",
   "compilerOptions": {
-    // "moduleResolution": "nodenext",
-    //   "lib": ["esnext"],
-    //   "types": ["node", "reflect-metadata", "jest"],
-
-    //   "sourceMap": true,
-    //   "declaration": true,
-    //   "declarationMap": true,
-
-    //   "noUncheckedIndexedAccess": true,
-    //   "exactOptionalPropertyTypes": true,
-
-    //   "strict": true,
-    //   "jsx": "react-jsx",
-    //   "verbatimModuleSyntax": true,
-    //   "isolatedModules": true,
-    //   "noUncheckedSideEffectImports": true,
-    //   "moduleDetection": "force",
-    //   "skipLibCheck": true
-
     "outDir": "./dist"
   },
   "include": ["src/**/*"]
